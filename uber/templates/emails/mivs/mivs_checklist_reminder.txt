@@ -4,19 +4,19 @@ Ahoy {{ guest.group.studio.primary_contact.first_name }},
 {% if two_days %}
 The following items are due two days from now:
 {% for name, url in two_days %}
--{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}
+-{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}&nbsp;
 {% endfor %}
 {% endif %}
 {% if one_day %}
 The following items are due tomorrow:
 {% for name, url in one_day %}
--{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}
+-{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}&nbsp;
 {% endfor %}
 {% endif %}
 {% if overdue %}
 The following items are overdue:
 {% for name, url in overdue %}
--{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}
+-{{ name }}: {{ c.URL_BASE }}/guests/{{ url }}?guest_id={{ guest.id }}&nbsp;
 {% endfor %}
 {% endif %}
 
