@@ -865,6 +865,15 @@ if c.MIVS_ENABLED:
         ident='mivs_2020_mixer_reminder'
     )
 
+    MIVSEmailFixture(
+        IndieGame,
+        'MIVS {EVENT_NAME}: Request for Feedback',
+        'mivs/feedback/indie_survey.txt',
+        lambda game: game.confirmed,
+        ident='mivs_feedback_survey',
+        allow_post_con=True,
+    )
+
 # =============================
 # mits
 # =============================
